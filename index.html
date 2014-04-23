@@ -50,6 +50,26 @@
             break;
         }
       }
+       function handleKeyDown(event)
+      {
+        switch(event.which)
+        {
+          case 87:
+            leftPaddle_y -= 2;
+            if(rightPaddle_y <= 0)
+            {
+              rightPaddle_y = 0;
+            } 
+            break;
+          case 83:
+            leftPaddle_y += 2;
+            if(rightPaddle_y >= CANVAS_HEIGHT - paddle_Height)
+            {
+              rightPaddle_y >= CANVAS_HEIGHT - paddle_Height;
+            } 
+            break;
+        }
+      }
 
       /**
        * This function takes a 2d canvas context and draws a ball on it at ballX and ballY
